@@ -1,0 +1,33 @@
+CODE
+#include<stdio.h>
+int main(){
+int a[100],n,i,pos,e;
+printf("enter the size of array:");
+scanf("%d",&n);
+printf("enter %d elements:",n);
+for(i=0;i<n;i++){
+scanf("%d",&a[i]);
+}
+printf("enter the position of insertion:");
+scanf("%d",&pos);
+printf("enter the element:");
+scanf("%d",&e);
+printf("Before inserting element:");
+for(i=0;i<n;i++){
+printf("%d\t",a[i]);}
+n=n+1;
+for(i=n-1;i>pos-1;i--){
+a[i]=a[i-1];}
+a[pos-1]=e;
+printf("\nAfter inserting element:");
+for(i=0;i<n;i++){
+printf("%d\t",a[i]);}
+return 0;
+}
+OUTPUT
+enter the size of array:5
+enter 5 elements:18 2 4 3 13
+enter the position of insertion:3
+enter the element:12
+Before inserting element:18	2	4	3	13	
+After inserting element:18	2	12	4	3	13
